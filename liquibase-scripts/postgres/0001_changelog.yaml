@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: postgres/sql/telegram_user.sql
