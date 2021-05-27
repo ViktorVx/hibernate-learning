@@ -16,7 +16,7 @@
     </parent>
 
     <modules>
-        <module>hibernate-learning-bh</module>
+        <module>leonidas-bh</module>
         <module>liquibase-scripts</module>
     </modules>
 
