@@ -1,0 +1,12 @@
+### Save telegram user
+POST http://localhost:8080/telegramUser/save
+Content-Type: application/json
+
+{
+  "id": "123456789",
+  "name": "Incognito",
+  "info": "Some person"
+}
+
+### Find telegram user by id
+GET http://localhost:8080/telegramUser/byId/123456789
