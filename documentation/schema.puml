@@ -1,0 +1,8 @@
+@startuml
+class TelegramUser {
+String id;
+String name;
+String info;
+void save()
+}
+@enduml
