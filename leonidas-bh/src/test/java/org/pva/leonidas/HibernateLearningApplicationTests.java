@@ -1,4 +1,4 @@
-package org.pva.hibernateLearning;
+package org.pva.leonidas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
