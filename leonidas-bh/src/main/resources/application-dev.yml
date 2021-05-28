@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+    url: ${leonidas.db.url}
+    username: ${leonidas.db.user.name}
+    password: ${leonidas.db.user.password}
+  jpa:
+    hibernate:
+      ddl-auto: validate
