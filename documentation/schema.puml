@@ -1,0 +1,66 @@
+@startuml
+class CentralUser {
+    String id;
+    String phoneNumber;
+    TelegramUser telegramUser;
+}
+
+class TelegramUser {
+    String id;
+    String name;
+    String info;
+    CentralUser centralUser;
+    ==
+    void save()
+    void delete()
+}
+
+class Good {
+    String id;
+    String goodsTitle;
+    String goodsDescription;
+    Set<GoodParameter> goodParameters;
+    Set<StoredImage> goodImages;
+    BigDecimal price;
+    ==
+    void save()
+    void delete()
+    Good getById()
+    List<Good> findByFilter()
+}
+
+class GoodParameter {
+    String id;
+    GoodParameterName goodParameterName;
+    GoodParameterDataType goodParameterDataType;
+    String parameterValue;
+    ==
+    void save()
+    void update()
+    List<GoodParameter> findByFilter()
+}
+
+class StoredImage {
+    String id;
+    Blob storedImage;
+    ==
+    void save()
+    void delete()
+}
+
+enum GoodParameterDataType {
+    STRING, INTEGER, DECIMAL, BOOLEAN
+}
+
+class GoodParameterName {
+    String id;
+    String name;
+    String parameterNameDescription;
+}
+
+GoodParameter }- Good
+GoodParameter }- GoodParameterName
+StoredImage }- Good
+GoodParameterDataType }- GoodParameter
+CentralUser -- TelegramUser
+@enduml
