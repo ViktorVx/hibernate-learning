@@ -3,3 +3,5 @@ databaseChangeLog:
       file: postgres/sql/telegram_user.sql
   - include:
       file: postgres/sql/central_user.sql
+  - include:
+      file: postgres/sql/good_parameter_name.sql
