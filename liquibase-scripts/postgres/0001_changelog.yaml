@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: postgres/sql/telegram_user.sql
+  - include:
+      file: postgres/sql/central_user.sql
