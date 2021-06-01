@@ -1,2 +1,9 @@
-## File .env*
-Contains environment variables using in docker containers
+## Run docker-compose.yml
+```shell
+cd docker-compose/
+docker-compose --env-file ../config/.env.dev up -d
+```
+## Stop docker-compose.yml
+```shell
+docker-compose down
+```
