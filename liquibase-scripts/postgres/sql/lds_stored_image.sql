@@ -11,7 +11,7 @@ DO $$
         IF (tableExists = FALSE) THEN
             CREATE TABLE IF NOT EXISTS ${schema}.LDS_STORED_IMAGE (
                 STORED_IMAGE_ID         VARCHAR(255) NOT NULL,
-                STORED_IMAGE            VARCHAR(255),
+                STORED_IMAGE            bytea,
                 CONSTRAINT LDS_PK_STORED_IMAGE_STORED_IMAGE_ID PRIMARY KEY (STORED_IMAGE_ID) USING INDEX TABLESPACE LDS_TS_IDX
             ) TABLESPACE LDS_TS_DATA;
 
