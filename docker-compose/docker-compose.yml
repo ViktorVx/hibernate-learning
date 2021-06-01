@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   database:
-    image: postgres:9.4
+    image: postgres:12.7
     restart: always
     environment:
       - POSTGRES_USER=${DB_USER_NAME}
