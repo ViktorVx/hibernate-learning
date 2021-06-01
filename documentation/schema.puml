@@ -17,6 +17,7 @@ class TelegramUser {
 
 class Good {
     String id;
+    String GTIN;
     String goodsTitle;
     String goodsDescription;
     Set<GoodParameter> goodParameters;
