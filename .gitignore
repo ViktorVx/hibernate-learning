@@ -34,3 +34,4 @@ build/
 .vscode/
 
 config/*
+!config/README.md
