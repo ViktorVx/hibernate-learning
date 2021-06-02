@@ -1,5 +1,5 @@
 ### Save telegram user
-POST http://localhost:8080/telegramUser/save
+POST http://localhost:8080/telegramUserModel/save
 Content-Type: application/json
 
 {
@@ -9,4 +9,4 @@ Content-Type: application/json
 }
 
 ### Find telegram user by id
-GET http://localhost:8080/telegramUser/byId/123456789
+GET http://localhost:8080/telegramUserModel/byId/123456789

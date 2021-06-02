@@ -2,12 +2,12 @@ package org.pva.leonidas.mapper;
 
 import org.mapstruct.Mapper;
 import org.pva.leonidas.controller.dto.TelegramUserDto;
-import org.pva.leonidas.db.model.TelegramUser;
+import org.pva.leonidas.db.model.user.TelegramUserModel;
 
 @Mapper(componentModel = "spring")
 public interface TelegramUserMapper {
 
-    TelegramUserDto toTelegramUserDto(TelegramUser telegramUser);
+    TelegramUserDto toTelegramUserDto(TelegramUserModel telegramUserModel);
 
-    TelegramUser toTelegramUser(TelegramUserDto telegramUserDto);
+    TelegramUserModel toTelegramUser(TelegramUserDto telegramUserDto);
 }
