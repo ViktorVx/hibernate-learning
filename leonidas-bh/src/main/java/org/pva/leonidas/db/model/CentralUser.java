@@ -13,13 +13,14 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "lds_telegram_user")
-public class TelegramUser {
+@Table(name = "telegram_user")
+public class CentralUser {
+
     @Id
-    @Column(name = "telegram_user_id")
-    private String id;
-    @Column(name = "user_name")
-    private String name;
-    @Column(name = "user_info")
-    private String info;
+    @Column(name = "central_user_id")
+    String id;
+
+    @Column(name = "phone_number")
+    String phoneNumber;
+
 }
