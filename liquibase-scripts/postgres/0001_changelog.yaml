@@ -4,8 +4,8 @@ databaseChangeLog:
   - include:
       file: postgres/sql/lds_central_user.sql
   - include:
-      file: postgres/sql/lds_good_parameter_name.sql
-  - include:
       file: postgres/sql/lds_stored_image.sql
   - include:
       file: postgres/sql/lds_good.sql
+  - include:
+      file: postgres/sql/lds_good_parameter.sql
