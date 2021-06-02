@@ -49,6 +49,7 @@
                             <url>${db.url}</url>
                             <username>${db.user.name}</username>
                             <password>${db.user.password}</password>
+                            <changelogSchemaName>${db.schema}</changelogSchemaName>
                         </configuration>
                         <executions>
                             <execution>
