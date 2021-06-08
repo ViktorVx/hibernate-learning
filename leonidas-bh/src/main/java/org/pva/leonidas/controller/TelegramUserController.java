@@ -16,13 +16,11 @@ public class TelegramUserController {
 
     @PostMapping(path = "/save", consumes = "application/json", produces = "application/json")
     public void save(@RequestBody TelegramUserDto telegramUser) {
-        log.info(telegramUser.toString());
         telegramUserService.save(telegramUser);
     }
 
     @GetMapping("/byId/{id}")
     public TelegramUserDto findById(@PathVariable String id) {
-        log.info(id);
         return telegramUserService.findById(id);
     }
 }

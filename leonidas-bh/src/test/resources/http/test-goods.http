@@ -1,0 +1,17 @@
+### Save good
+POST http://localhost:8080/good/save
+Content-Type: application/json
+
+{
+  "id": "123456789",
+  "title": "title",
+  "gtin": "123",
+  "description": "Good description",
+  "price": "150.50"
+}
+
+### Find good by id
+GET http://localhost:8080/good/byId/123456789
+
+### Find good by id
+GET http://localhost:8080/good/all
