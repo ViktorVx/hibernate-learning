@@ -10,9 +10,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 @Slf4j
 public class LeonidasBot extends TelegramLongPollingBot {
 
-    @Value("${telegram.bot.name}")
+    @Value("${telegram.bot.leonidas_store_bot.name}")
     private String botName;
-    @Value("${telegram.bot.token}")
+    @Value("${telegram.bot.leonidas_store_bot.token}")
     private String botToken;
 
     @Override
