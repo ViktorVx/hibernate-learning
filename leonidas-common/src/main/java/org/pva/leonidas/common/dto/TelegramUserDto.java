@@ -1,4 +1,4 @@
-package org.pva.leonidas.controller.dto;
+package org.pva.leonidas.common.dto;
 
 import lombok.*;
 

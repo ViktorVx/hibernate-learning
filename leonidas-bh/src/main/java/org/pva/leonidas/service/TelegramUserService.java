@@ -1,7 +1,7 @@
 package org.pva.leonidas.service;
 
 import lombok.AllArgsConstructor;
-import org.pva.leonidas.controller.dto.TelegramUserDto;
+import org.pva.leonidas.common.dto.TelegramUserDto;
 import org.pva.leonidas.db.model.user.CentralUserModel;
 import org.pva.leonidas.db.repository.CentralUserRepository;
 import org.pva.leonidas.db.repository.TelegramUserRepository;

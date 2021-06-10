@@ -1,8 +1,8 @@
 package org.pva.leonidas.mapper;
 
 import org.mapstruct.Mapper;
-import org.pva.leonidas.controller.dto.GoodDto;
-import org.pva.leonidas.controller.dto.GoodListDto;
+import org.pva.leonidas.common.dto.GoodDto;
+import org.pva.leonidas.common.dto.GoodListDto;
 import org.pva.leonidas.db.model.good.GoodModel;
 
 import java.util.List;

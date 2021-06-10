@@ -2,8 +2,8 @@ package org.pva.leonidas.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.pva.leonidas.controller.dto.GoodDto;
-import org.pva.leonidas.controller.dto.GoodListDto;
+import org.pva.leonidas.common.dto.GoodDto;
+import org.pva.leonidas.common.dto.GoodListDto;
 import org.pva.leonidas.service.GoodService;
 import org.springframework.web.bind.annotation.*;
 

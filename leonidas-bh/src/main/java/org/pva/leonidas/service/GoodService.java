@@ -1,8 +1,8 @@
 package org.pva.leonidas.service;
 
 import lombok.AllArgsConstructor;
-import org.pva.leonidas.controller.dto.GoodDto;
-import org.pva.leonidas.controller.dto.GoodListDto;
+import org.pva.leonidas.common.dto.GoodDto;
+import org.pva.leonidas.common.dto.GoodListDto;
 import org.pva.leonidas.db.repository.GoodRepository;
 import org.pva.leonidas.mapper.GoodMapper;
 import org.springframework.stereotype.Service;

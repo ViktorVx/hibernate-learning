@@ -15,10 +15,20 @@
         <relativePath/>
     </parent>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
     <modules>
         <module>leonidas-bh</module>
         <module>liquibase-scripts</module>
         <module>leonidas-telegram-bot</module>
+        <module>leonidas-common</module>
     </modules>
 
 </project>
