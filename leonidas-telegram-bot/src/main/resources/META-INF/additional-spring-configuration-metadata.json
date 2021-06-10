@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "telegram.bot.leonidas_store_bot.name",
+      "type": "java.lang.String",
+      "description": "Name of leonidas_store_bot telegram.bot.leonidas_store_bot.name."
+    },
+    {
+      "name": "telegram.bot.leonidas_store_bot.token",
+      "type": "java.lang.String",
+      "description": "Token for leonidas_store_bot telegram.bot.leonidas_store_bot.token."
+    }
+  ]
+}
