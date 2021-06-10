@@ -1,4 +1,4 @@
-package org.pva.leonidas.controller.dto;
+package org.pva.leonidas.common.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,11 +11,8 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class GoodDto {
-
+public class GoodListDto {
     private String id;
     private String title;
-    private String gtin;
-    private String description;
     private BigDecimal price;
 }

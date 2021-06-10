@@ -2,7 +2,7 @@ package org.pva.leonidas.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.pva.leonidas.controller.dto.GoodDto;
+import org.pva.leonidas.common.dto.GoodDto;
 import org.pva.leonidas.mapper.GoodMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
