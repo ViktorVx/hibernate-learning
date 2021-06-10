@@ -18,6 +18,7 @@
     <modules>
         <module>leonidas-bh</module>
         <module>liquibase-scripts</module>
+        <module>leonidas-telegram-bot</module>
     </modules>
 
 </project>
