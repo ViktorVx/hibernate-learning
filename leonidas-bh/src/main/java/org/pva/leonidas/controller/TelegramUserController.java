@@ -3,7 +3,7 @@ package org.pva.leonidas.controller;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.pva.leonidas.common.dto.TelegramUserDto;
-import org.pva.leonidas.service.TelegramUserService;
+import org.pva.leonidas.starter.service.TelegramUserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

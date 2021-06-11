@@ -29,6 +29,7 @@
         <module>liquibase-scripts</module>
         <module>leonidas-telegram-bot</module>
         <module>leonidas-common</module>
+        <module>leonidas-spring-boot-starter</module>
     </modules>
 
 </project>

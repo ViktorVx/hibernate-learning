@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.pva.leonidas.common.dto.GoodDto;
 import org.pva.leonidas.common.dto.GoodListDto;
-import org.pva.leonidas.service.GoodService;
+import org.pva.leonidas.starter.service.GoodService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
