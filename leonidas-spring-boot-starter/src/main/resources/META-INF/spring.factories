@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.pva.leonidas.starter.autoconfiguration.LeonidasAutoConfiguration

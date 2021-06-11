@@ -30,7 +30,9 @@ public class LeonidasBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        if (update != null && update.getMessage() != null)
+        if (update != null && update.getMessage() != null) {
             log.info(update.getMessage().getText());
+            log.info(userInfoProvider.storeUserInfo());
+        }
     }
 }

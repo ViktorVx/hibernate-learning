@@ -1,4 +1,4 @@
-package org.pva.leonidas.service;
+package org.pva.leonidas.starter.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
