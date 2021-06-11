@@ -1,0 +1,5 @@
+telegram:
+  bot:
+    leonidas_store_bot:
+      name: ${LEONIDAS_BOT_NAME}
+      token: ${LEONIDAS_BOT_TOKEN}
