@@ -14,7 +14,7 @@ public class LeonidasAutoConfiguration {
     private final LeonidasStoreProperties leonidasStoreProperties;
 
     @Bean
-    public LeonidasBhService leonidasBhService() {
-        return new LeonidasBhService();
+    public LeonidasBhService leonidasBhService(LeonidasStoreProperties leonidasStoreProperties) {
+        return new LeonidasBhService(leonidasStoreProperties);
     }
 }

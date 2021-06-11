@@ -3,3 +3,8 @@ telegram:
     leonidas_store_bot:
       name: ${LEONIDAS_BOT_NAME}
       token: ${LEONIDAS_BOT_TOKEN}
+leonidas:
+  bh:
+    starter:
+      host: 127.0.0.1
+      port: 8080
