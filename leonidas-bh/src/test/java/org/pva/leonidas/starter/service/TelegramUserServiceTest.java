@@ -24,8 +24,8 @@ class TelegramUserServiceTest {
         var id = "12345";
         var telegramUser = TelegramUserDto.builder()
                 .id(id)
-                .name("userName")
-                .info("userInfo")
+                .firstName("userName")
+                .lastName("userInfo")
                 .build();
 
         // Act
