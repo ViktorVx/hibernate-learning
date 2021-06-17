@@ -1,6 +1,7 @@
 package org.pva.leonidas.telegram.bot.provider;
 
 import lombok.AllArgsConstructor;
+import org.pva.leonidas.common.dto.TelegramUserDto;
 import org.pva.leonidas.starter.service.LeonidasBhService;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +15,7 @@ public class UserInfoProvider {
         return "User info";
     }
 
-    public String storeUserInfo() {
-        return leonidasBhService.saveTelegramUser();
+    public void storeUserInfo(TelegramUserDto telegramUserDto) {
+        leonidasBhService.storeTelegramUser(telegramUserDto);
     }
 }

@@ -12,10 +12,6 @@
 
 	<description>Demo project for Hibernate</description>
 
-	<properties>
-		<java.version>11</java.version>
-	</properties>
-
 	<repositories>
 		<repository>
 			<id>central</id>
@@ -30,24 +26,12 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.pva</groupId>
-			<artifactId>leonidas-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-<!--			<scope>system</scope>-->
-<!--			<systemPath>/path_to_jar_file_in_local_repo</systemPath>-->
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct</artifactId>
-			<version>1.4.1.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -89,20 +73,20 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>${maven.compiler.plugin.version}</version>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-							<version>1.18.10</version>
+							<version>${lomboc.version}</version>
 						</path>
 						<path>
 							<groupId>org.mapstruct</groupId>
 							<artifactId>mapstruct-processor</artifactId>
-							<version>1.4.1.Final</version>
+							<version>${mapstruct.version}</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>

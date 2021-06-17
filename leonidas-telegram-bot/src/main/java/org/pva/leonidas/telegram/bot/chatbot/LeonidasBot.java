@@ -2,6 +2,7 @@ package org.pva.leonidas.telegram.bot.chatbot;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.pva.leonidas.telegram.bot.mapper.TelegramUserMapper;
 import org.pva.leonidas.telegram.bot.provider.CredentialProvider;
 import org.pva.leonidas.telegram.bot.provider.GoodsInfoProvider;
 import org.pva.leonidas.telegram.bot.provider.UserInfoProvider;
@@ -17,6 +18,7 @@ public class LeonidasBot extends TelegramLongPollingBot {
     private final CredentialProvider credentialProvider;
     private final UserInfoProvider userInfoProvider;
     private final GoodsInfoProvider goodsInfoProvider;
+    private final TelegramUserMapper telegramUserMapper;
 
     @Override
     public String getBotUsername() {
@@ -31,8 +33,12 @@ public class LeonidasBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         if (update != null && update.getMessage() != null) {
-            log.info(update.getMessage().getText());
-            log.info(userInfoProvider.storeUserInfo());
+            // Store user info
+            var user = update.getMessage().getFrom();
+            var dto = telegramUserMapper.toTelegramUserDto(user);
+            log.info(String.valueOf(dto));
+            userInfoProvider.storeUserInfo(dto);
+            //
         }
     }
 }
