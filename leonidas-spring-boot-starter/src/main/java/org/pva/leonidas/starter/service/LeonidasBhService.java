@@ -1,17 +1,24 @@
 package org.pva.leonidas.starter.service;
 
 import lombok.AllArgsConstructor;
-import org.pva.leonidas.starter.autoconfiguration.LeonidasStoreProperties;
+import lombok.extern.slf4j.Slf4j;
+import org.pva.leonidas.common.dto.TelegramUserDto;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 
 @AllArgsConstructor
+@Slf4j
 public class LeonidasBhService {
 
-    private final LeonidasStoreProperties leonidasStoreProperties;
+    private final WebClient webClient;
 
-    public String saveTelegramUser() {
-        return String.format("SUCCESS. Host: %s, port: %s",
-                leonidasStoreProperties.getHost(),
-                leonidasStoreProperties.getPort());
+    public void storeTelegramUser(TelegramUserDto telegramUserDto) {
+        webClient.post()
+                .uri("/telegramUser/save")
+                .body(Mono.just(telegramUserDto), TelegramUserDto.class)
+                .retrieve()
+                .bodyToMono(TelegramUserDto.class)
+                .subscribe();
     }
 
     public String getAllGoods() {

@@ -1,18 +1,17 @@
 package org.pva.leonidas.starter.service;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.pva.leonidas.common.dto.TelegramUserDto;
-import org.pva.leonidas.db.model.user.CentralUserModel;
 import org.pva.leonidas.db.repository.CentralUserRepository;
 import org.pva.leonidas.db.repository.TelegramUserRepository;
 import org.pva.leonidas.mapper.TelegramUserMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.UUID;
-
 @Service
 @AllArgsConstructor
+@Slf4j
 public class TelegramUserService {
 
     private final TelegramUserRepository telegramUserRepository;
@@ -21,17 +20,9 @@ public class TelegramUserService {
 
     @Transactional
     public void save(TelegramUserDto telegramUser) {
+        log.info(String.valueOf(telegramUser));
         var telegramUserModel = telegramUserMapper.toTelegramUser(telegramUser);
         telegramUserRepository.save(telegramUserModel);
-
-        var centralUser = centralUserRepository.findByTelegramUser(telegramUserModel);
-        if (centralUser == null) {
-            centralUser = CentralUserModel.builder()
-                    .id(UUID.randomUUID().toString())
-                    .telegramUser(telegramUserModel)
-                    .build();
-            centralUserRepository.save(centralUser);
-        }
     }
 
     @Transactional

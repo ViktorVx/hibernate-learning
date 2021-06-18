@@ -1,6 +1,9 @@
 package org.pva.leonidas.common.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
@@ -8,6 +11,9 @@ import lombok.*;
 @Builder
 public class TelegramUserDto {
     private String id;
-    private String name;
-    private String info;
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private String languageCode;
+    private boolean bot;
 }

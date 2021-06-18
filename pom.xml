@@ -15,12 +15,24 @@
         <relativePath/>
     </parent>
 
+    <properties>
+        <java.version>11</java.version>
+        <lomboc.version>1.18.20</lomboc.version>
+        <mapstruct.version>1.4.1.Final</mapstruct.version>
+        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <version>${lomboc.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
         </dependency>
     </dependencies>
 
