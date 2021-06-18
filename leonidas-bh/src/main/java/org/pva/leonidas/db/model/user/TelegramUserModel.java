@@ -21,6 +21,4 @@ public class TelegramUserModel {
     private String name;
     @Column(name = "user_info")
     private String info;
-    @OneToOne(mappedBy = "telegramUser")
-    private CentralUserModel centralUser;
 }
