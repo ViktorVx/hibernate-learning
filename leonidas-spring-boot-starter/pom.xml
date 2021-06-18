@@ -26,6 +26,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.pva</groupId>
+            <artifactId>leonidas-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>/Users/u18161290/.m2/repository/org/pva/leonidas-common/0.0.1-SNAPSHOT/leonidas-common-0.0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
     </dependencies>
 
 </project>

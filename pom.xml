@@ -34,13 +34,6 @@
             <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.pva</groupId>
-            <artifactId>leonidas-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <!--<scope>system</scope>-->
-            <!--<systemPath>/path_to_jar_file_in_local_repo</systemPath>-->
-        </dependency>
     </dependencies>
 
     <modules>
