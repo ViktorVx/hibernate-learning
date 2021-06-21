@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="ViktorVx" id="1624286548597-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <preConditions onFail="MARK_RAN">
+            <not><tableExists tableName="lds_good" schemaName="${schema}"/></not>
+        </preConditions>
+        <createTable remarks="Данные о товаре" tableName="lds_good" schemaName="${schema}">
+            <column name="good_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gtin" remarks="Глобальный номер товара" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="good_title" remarks="Краткое наименование товара" type="VARCHAR(255)"/>
+            <column name="good_description" remarks="Описание товара" type="VARCHAR(1024)"/>
+            <column name="good_price" remarks="Цена товара" type="numeric(38)"/>
+        </createTable>
+        <addPrimaryKey columnNames="good_id" constraintName="lds_pk_good_id" tableName="lds_good" schemaName="${schema}"/>
+    </changeSet>
+</databaseChangeLog>

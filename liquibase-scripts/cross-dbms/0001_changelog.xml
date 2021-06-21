@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="properties_block.xml" relativeToChangelogFile="true"/>
+
+    <!--RELEASE: frontend-4.2-->
+    <!--DDL-->
+    <include file="releases/1_0/ddl/lds_telegram_user.xml" relativeToChangelogFile="true"/>
+    <include file="releases/1_0/ddl/lds_central_user.xml" relativeToChangelogFile="true"/>
+    <include file="releases/1_0/ddl/lds_stored_image.xml" relativeToChangelogFile="true"/>
+    <include file="releases/1_0/ddl/lds_good.xml" relativeToChangelogFile="true"/>
+    <include file="releases/1_0/ddl/lds_good_parameter.xml" relativeToChangelogFile="true"/>
+
+    <!--DML-->
+
+</databaseChangeLog>

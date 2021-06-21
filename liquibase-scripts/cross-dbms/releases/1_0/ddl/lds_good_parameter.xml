@@ -1,0 +1,24 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="ViktorVx" id="1624286548597-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <preConditions onFail="MARK_RAN">
+            <not><tableExists tableName="lds_good_parameter" schemaName="${schema}"/></not>
+        </preConditions>
+        <createTable remarks="Характеристики товаров}" tableName="lds_good_parameter" schemaName="${schema}">
+            <column name="good_param_id" remarks="Идентификатор характеристики" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="good_id" remarks="Идентификатор товара" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="good_param_name" remarks="Наименование параметра" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="good_param_data_type" remarks="Тип данных параметра" type="VARCHAR(255)"/>
+            <column name="good_description" remarks="Описание характеристики" type="VARCHAR(1024)"/>
+            <column name="good_param_value" remarks="Значение характеристики" type="VARCHAR(512)"/>
+        </createTable>
+        <addPrimaryKey columnNames="good_param_id" constraintName="lds_pk_good_param_id" tableName="lds_good_parameter" schemaName="${schema}"/>
+        <addForeignKeyConstraint baseColumnNames="good_id" baseTableName="lds_good_parameter" constraintName="lds_fk_good_parameter_good_id_good_good_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="good_id" referencedTableName="lds_good" baseTableSchemaName="${schema}" referencedTableSchemaName="${schema}"/>
+    </changeSet>
+</databaseChangeLog>

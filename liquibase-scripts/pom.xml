@@ -12,8 +12,8 @@
     <artifactId>liquibase-scripts</artifactId>
 
     <properties>
-        <postgresql.version>42.2.14</postgresql.version>
-        <liquibase-maven-plugin.version>3.5.1</liquibase-maven-plugin.version>
+        <postgresql.version>42.2.20</postgresql.version>
+        <liquibase.version>4.4.0</liquibase.version>
     </properties>
 
     <dependencies>
@@ -25,7 +25,7 @@
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
-            <version>4.3.5</version>
+            <version>${liquibase.version}</version>
         </dependency>
     </dependencies>
 
@@ -40,17 +40,24 @@
                     <plugin>
                         <groupId>org.liquibase</groupId>
                         <artifactId>liquibase-maven-plugin</artifactId>
-                        <version>${liquibase-maven-plugin.version}</version>
+                        <version>${liquibase.version}</version>
                         <configuration>
                             <databaseChangeLogTableName>LIQ_DATABASECHANGELOG</databaseChangeLogTableName>
                             <databaseChangeLogLockTableName>LIQ_DATABASECHANGELOGLOCK</databaseChangeLogLockTableName>
                             <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
-                            <changeLogFile>postgres/0001_changelog.yaml</changeLogFile>
+                            <changeLogFile>cross-dbms/0001_changelog.xml</changeLogFile>
                             <url>${db.url}</url>
                             <username>${db.user.name}</username>
                             <password>${db.user.password}</password>
                             <changelogSchemaName>${db.schema}</changelogSchemaName>
                         </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.postgresql</groupId>
+                                <artifactId>postgresql</artifactId>
+                                <version>${postgresql.version}</version>
+                            </dependency>
+                        </dependencies>
                         <executions>
                             <execution>
                                 <id>Migration_stage</id>
