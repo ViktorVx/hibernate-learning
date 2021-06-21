@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="ViktorVx" id="1624286548597-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <preConditions onFail="MARK_RAN">
+            <not><tableExists tableName="lds_central_user" schemaName="${schema}"/></not>
+        </preConditions>
+        <createTable remarks="Таблица объединяющая всю информацию о пользователе" tableName="lds_central_user" schemaName="${schema}">
+            <column name="central_user_id" remarks="Уникальный идентификатор" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone_number" remarks="Телефонный номер" type="VARCHAR(255)"/>
+            <column name="telegram_user" remarks="Ссылка на пользователя Telegram" type="VARCHAR(255)"/>
+        </createTable>
+        <addPrimaryKey columnNames="central_user_id" constraintName="lds_pk_central_user_central_user_id" tableName="lds_central_user" schemaName="${schema}"/>
+        <addUniqueConstraint columnNames="phone_number" constraintName="lds_uc_central_user_phone_number" tableName="lds_central_user" schemaName="${schema}"/>
+        <createIndex indexName="lds_idx_lds_central_user_telegram_user" tableName="lds_central_user" schemaName="${schema}">
+            <column name="telegram_user"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="telegram_user" baseTableName="lds_central_user" constraintName="lds_fk_central_user_telegram_user" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="telegram_user_id" referencedTableName="lds_telegram_user" baseTableSchemaName="${schema}" referencedTableSchemaName="${schema}"/>
+    </changeSet>
+</databaseChangeLog>
