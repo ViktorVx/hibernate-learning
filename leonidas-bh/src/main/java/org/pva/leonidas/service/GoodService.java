@@ -1,4 +1,4 @@
-package org.pva.leonidas.starter.service;
+package org.pva.leonidas.service;
 
 import lombok.AllArgsConstructor;
 import org.pva.leonidas.common.dto.GoodDto;

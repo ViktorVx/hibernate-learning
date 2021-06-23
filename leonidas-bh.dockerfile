@@ -12,7 +12,7 @@ RUN mvn clean package -Dleonidas.common.path=/tmp/common/target/leonidas-common-
 
 FROM adoptopenjdk/openjdk11:x86_64-alpine-jdk-11.0.4_11
 WORKDIR /tmp/
-COPY --from=0 /tmp/bh/target/*.jar /tmp/bh/app.jar
+COPY --from=0 /tmp/bh/target/leonidas-bh-0.0.1-SNAPSHOT-spring-boot.jar /tmp/bh/app.jar
 WORKDIR /tmp/bh/
 ENTRYPOINT ["java", "-jar", "app.jar"]
 EXPOSE 8080
