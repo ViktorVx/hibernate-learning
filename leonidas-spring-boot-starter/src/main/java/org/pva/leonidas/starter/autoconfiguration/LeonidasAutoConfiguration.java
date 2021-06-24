@@ -1,7 +1,7 @@
 package org.pva.leonidas.starter.autoconfiguration;
 
 import lombok.AllArgsConstructor;
-import org.pva.leonidas.starter.service.LeonidasBhService;
+import org.pva.leonidas.service.LeonidasBhService;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

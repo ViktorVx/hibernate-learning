@@ -2,7 +2,7 @@ package org.pva.leonidas.telegram.bot.provider;
 
 import lombok.AllArgsConstructor;
 import org.pva.leonidas.common.dto.TelegramUserDto;
-import org.pva.leonidas.starter.service.LeonidasBhService;
+import org.pva.leonidas.service.LeonidasBhService;
 import org.springframework.stereotype.Component;
 
 @Component
