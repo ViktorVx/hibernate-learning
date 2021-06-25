@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  database:
+  leonidas_db:
     image: postgres:12.7
     container_name: leonidas_db
     restart: always
@@ -16,15 +16,13 @@ services:
       - ${DB_FILE_SYSTEM_STORAGE}:/var/lib/postgresql
       - ${DB_FILE_SYSTEM_STORAGE}/data:/var/lib/postgresql/data
       - ./postgres-database/init-scripts:/docker-entrypoint-initdb.d
-    networks:
-      - common_net
-  bh:
+  leonidas_bh:
     image: viktorvx/leonidas-bh:latest
     container_name: leonidas_bh
     depends_on:
       - leonidas_db
     environment:
-      - leonidas.db.url=${LEONIDAS_DB_URL}
+      - leonidas.db.url=jdbc:postgresql://leonidas_db:${LEONIDAS_DB_PORT}/${LEONIDAS_DB_NAME}
       - leonidas.db.user.name=${LEONIDAS_DB_USER_NAME}
       - leonidas.db.user.password=${LEONIDAS_DB_USER_PASSWORD}
       - leonidas.db.schema=${LEONIDAS_DB_SCHEMA}
