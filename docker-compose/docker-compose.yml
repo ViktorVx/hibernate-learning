@@ -1,9 +1,5 @@
 version: '3.8'
 
-networks:
-  common_net:
-    external: true
-
 services:
   database:
     image: postgres:12.7
